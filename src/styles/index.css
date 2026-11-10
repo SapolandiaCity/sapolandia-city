@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-ink-950 font-sans text-slate-200 antialiased; }
+  h1, h2, h3 { @apply font-display tracking-tight text-white; }
+  ::selection { @apply bg-brand/30 text-white; }
+}
+
+@layer components {
+  .container-app { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .glass { @apply rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur; }
+  .card-hover { @apply transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow; }
+  .grad-text { @apply bg-gradient-to-r from-brand-300 via-gold to-brand bg-clip-text text-transparent; }
+  .grid-bg {
+    background-image: radial-gradient(circle at 20% 0%, rgba(18,209,122,.14), transparent 45%),
+                      radial-gradient(circle at 85% 10%, rgba(232,197,106,.10), transparent 40%);
+  }
+  .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+}
